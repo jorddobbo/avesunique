@@ -1,0 +1,38 @@
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+html {
+    max-width: 100%;
+    box-sizing: border-box;
+    min-height: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    position: relative;
+    width: 100%;
+    background: #fff;
+    color: $dark;
+    font: #{($base-font-size/16px)*100%}/#{$base-line-height} $sans;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+}
+
+a {
+    color: $darker;
+    text-decoration: none;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}

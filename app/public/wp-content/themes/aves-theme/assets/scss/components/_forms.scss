@@ -1,0 +1,63 @@
+// Input
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+input,
+textarea,
+select {
+    padding: 10px;
+    @include font-size($base-font-size);
+    line-height: $base-line-height;
+    border: 1px solid $light;
+    border-radius: $base-radius;
+    appearance: none;
+    background: #fff;
+
+    &:hover, &:focus {
+        outline: none;
+    }
+}
+
+select {
+    background: url(../img/icons/chevron-down.svg) 95% center no-repeat;
+    padding: 10px 40px 10px 10px;
+}
+
+textarea {
+	
+}
+
+.input--combined {
+    width: 100%;
+
+    @include media-query(min, $mob-start) {
+        display: flex;
+    }
+
+    input {
+        width: 100%;
+        margin-bottom: 10px;
+
+        @include media-query(min, $mob-start) {
+            flex-grow: 0;
+            flex-basis: 100%;
+            border-radius: $base-radius 0 0 $base-radius;
+            margin-bottom: 0;
+        }
+    }
+
+    button {
+        @include media-query(min, $mob-start) {
+            flex-shrink: 0;
+            border-radius: 0 $base-radius $base-radius 0;
+        }
+    }
+}

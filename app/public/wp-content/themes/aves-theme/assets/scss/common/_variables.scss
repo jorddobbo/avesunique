@@ -1,0 +1,46 @@
+// Grid settings
+
+$main-sm-columns: 12;
+$sidebar-sm-columns: 4;
+
+// Colors
+
+$pink: #F9B2DC;
+$peach: #FCE1E9;
+$purple: #D0D5FB;
+$green: #D5FBCA;
+$yellow: #FCF0E1;
+
+$darker: #303033;
+$dark: #626066;
+$light: #EAEAEA;
+
+// Fonts
+
+$base-font-size: 16px;
+$base-line-height: 26px;
+$sans: 'Rad', sans-serif;
+
+// Radius
+
+$base-radius: 4px;
+
+// Transition
+
+$base-transition: .25s;
+
+// Grids
+$page-width: 1200px;
+$mob-start: 420px;
+$lap-start: 680px;
+$desk-start: 850px;
+$wide-start: 1000px;
+
+$breakpoints: (
+    'mob' 0 $lap-start 4% (3, 4),
+    'lap' $lap-start $desk-start 4% (3, 4, 6, 8),
+    'desk' $desk-start $wide-start 2% (6, 8, 10, 12),
+    'wide' $wide-start 0 2% (6, 8, 10, 12)
+);
+
+$blockgrids: (2, 3, 4, 5, 8);

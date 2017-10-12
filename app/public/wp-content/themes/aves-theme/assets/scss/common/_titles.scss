@@ -1,0 +1,103 @@
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+    font-family: $sans;
+    padding-top: 10px;
+    color: $darker;
+    font-weight: bold;
+    line-height: 1em;
+
+    a {
+        color: $darker;
+        text-decoration: none;
+    }
+
+    span {
+        font-weight: normal;
+    }
+}
+
+h1, .h1 {
+    @include font-size(30px);
+    margin-bottom: 20px;
+
+    @include media-query(min, $desk-start){
+        @include font-size(40px);
+    }
+}
+
+h2, .h2 {
+    @include font-size(20px);
+    padding-top: 20px;
+
+    @include media-query(min, $desk-start){
+        @include font-size(30px);
+    }
+}
+
+h3, .h3 {
+    @include font-size($base-font-size);
+    margin-bottom: 15px;
+
+    @include media-query(min, $desk-start){
+        @include font-size(20px);
+    }
+}
+
+h4, .h4 {
+    @include font-size($base-font-size);
+
+    @include media-query(min, $desk-start){
+        @include font-size(16px);
+    }
+}
+
+.section__title {
+    position: relative;
+    text-align: center;
+    margin: 0 0 40px 0;
+
+    .sub {
+        display: block;
+        color: $dark;
+        font-size: 16px;
+        letter-spacing: 0.3em;
+        text-transform: uppercase;
+    }
+
+    .main {
+        @include font-size(40px);
+        padding: 0;
+        position: relative;
+
+        span {
+            display: inline-block;
+            position: relative;
+            padding: 0 20px;
+            font-weight: bold;
+            background: #fff;
+            z-index: 2;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            height: 1px;
+            left: 0;
+            right: 0;
+            top: 50%;
+            background: #eaeaea;
+            z-index: 1;
+        }
+    }
+
+    .icon {
+        &::before {
+            color: #f9b2dd;
+            font-size: 25px;
+        }
+    }
+}

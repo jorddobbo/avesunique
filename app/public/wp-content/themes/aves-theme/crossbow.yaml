@@ -1,0 +1,51 @@
+watch:
+  default:
+    before:
+      - build-css:dev
+      - build-js:dev
+      - bs:init
+    './assets/scss': [build-css:dev, bs:inject-css]
+    './assets/js': [build-js:dev, bs:inject-js]
+    './**/*.php': [bs:reload]
+
+tasks:
+  (build-css):
+    dev:
+      - crossbow-sass
+    production:
+      - crossbow-sass --production
+
+  (build-js):
+    dev: '@npm webpack'
+    production: '@npm webpack -p'
+
+  build-icons:
+    tasks: 'icons.js'
+    options:
+      input: 'assets/img/svg/*.svg'
+      output: 'assets/icons'
+
+  build-all:
+    description: Builds all assets
+    tasks:
+      - build-css:production
+      - build-js:production
+      - build-icons
+
+options:
+  bs:
+    init:
+      method: init
+      proxy: 'aves-unique.dev'
+    inject-css:
+      method: "reload"
+      args: ['main.css', 'main.min.css']
+    inject-js:
+      method: "reload"
+      args: ['bundle.js']
+    reload:
+      method: "reload"
+
+  crossbow-sass:
+    input: 'assets/scss/main.scss'
+    output: 'assets/dist'

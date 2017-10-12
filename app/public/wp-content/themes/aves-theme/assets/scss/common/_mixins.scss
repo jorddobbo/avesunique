@@ -1,0 +1,174 @@
+/**
+ * Output clearfix rules
+ *
+   `@include clearfix();`
+ *
+ */
+@mixin clearfix {
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+    zoom: 1;
+}
+@mixin no-clearfix {
+    &:before,
+    &:after {
+        display: none;
+    }
+    &:after {
+        clear: none;
+    }
+    zoom: normal;
+}
+
+/**
+ * Flexbox create gutters
+ *
+   `@include flex-gutters($base-spacing, 3, $desk-start);`
+ *
+ */
+@mixin flex-gutters($spacing, $columns, $breakpoint: $end) {
+    $column-width: 100%/$columns;
+    $spacing-total: $spacing * ($columns - 1);
+    $gutter-size: $spacing-total/$columns;
+    $width: calc(#{$column-width} - #{$gutter-size});
+    width: $width;
+    margin-left: 0;
+    margin-right: $spacing;
+
+    @include media-query (max, $breakpoint) {
+        &:nth-child(#{$columns}n+#{$columns}) {
+            margin-right: 0;
+            //margin-left: auto;
+        }
+    }
+}
+
+
+/**
+ * Output media query block
+ *
+   `@include media-query(min, 640px);`
+ *
+ */
+@mixin media-query($type, $breakpoint: $lap-start) {
+    @if $type == "min" {
+        @media only screen and (min-width: $breakpoint) {
+            @content
+        }
+    } @else if $type == "max" {
+        @media only screen and (max-width: $breakpoint - 1px) {
+            @content
+        }
+    } @else if $type == "palm" {
+        @media only screen and (max-width: $lap-start - 1px) {
+            @content
+        }
+    } @else if $type == "lap" {
+        @media only screen and (min-width: $lap-start) and (max-width: $desk-start - 1px) {
+            @content
+        }
+    } @else if $type == "desk" {
+        @media only screen and (min-width: $desk-start) {
+            @content
+        }
+    } @else if $type == "wide" {
+        @media only screen and (min-width: $wide-start) {
+            @content
+        }
+    } @else if $type == "retina" {
+        @media only screen and (-webkit-min-device-pixel-ratio: 2),
+        only screen and (min--moz-device-pixel-ratio: 2),
+        only screen and (-o-min-device-pixel-ratio: 2/1),
+        only screen and (min-device-pixel-ratio: 2),
+        only screen and (min-resolution: 192dpi),
+        only screen and (min-resolution: 2dppx) {
+            @content
+        }
+    }
+}
+
+/**
+ * Output media query block with min and max limits
+ *
+   `@include media-query-bracket(640px, 960px);`
+ *
+ */
+@mixin media-query-bracket($from: 0, $to: 0) {
+    @if $to > $from {
+        @media only screen and (min-width: $from) and (max-width: $to - 1px) {
+            @content
+        }
+    }
+}
+
+/*========================================
+Styling
+========================================*/
+
+/**
+ * Output font size using rem and px fallback
+ *
+   `@include font-size(10px);`
+ *
+ */
+@mixin font-size($font-size) {
+    font-size: $font-size;
+    font-size: ($font-size / $base-font-size)*1rem;
+    line-height: ($font-size * 1.3);
+}
+
+@mixin list-reset() {
+    margin-left: 0;
+    list-style: none;
+}
+
+@mixin overlay ($direction) {
+    &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: linear-gradient(to $direction, rgba($black, 0.7), rgba($black, 0));
+        border-radius: $base-radius;
+    }
+}
+
+@mixin box-shadow () {
+    box-shadow: 0px 5px 30px rgba($black, 0.1);
+}
+
+@mixin spacing () {
+    margin-bottom: $base-spacing;
+
+    @include media-query (min, $lap-start) {
+        margin-bottom: ($base-spacing * 2);
+    }
+
+    @include media-query (min, $desk-start) {
+        margin-bottom: ($base-spacing * 3);
+    }
+}
+
+@mixin icon-circle($color) {
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	background: $color;
+	border-radius: 50px;
+	color: rgba(0,0,0,0.6);
+	vertical-align: middle;
+	display: inline-block;
+
+	&::before {
+		font-size: 22px;
+	}
+}

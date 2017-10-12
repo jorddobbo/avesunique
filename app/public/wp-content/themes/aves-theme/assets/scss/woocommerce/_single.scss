@@ -1,0 +1,323 @@
+.woocommerce .product {
+
+.single-product {
+
+	.product {
+		@include clearfix;
+	}
+
+}
+
+.product__images {
+	width: calc(65% - 80px);
+	float: left;
+	margin: 0 80px 0 0;
+}
+
+.product__information {
+	width: 35%;
+	float: left;
+
+	h1 {
+		padding: 0;
+	}
+
+	.price {
+		@include font-size(30px);
+		color: $dark;
+		margin: 0 0 30px 0;
+	}
+
+	.cart {
+		display: flex;
+		margin: 0 0 30px 0;
+
+		button {
+			flex: 1;
+			width: 100%;
+			@include button($green, 20px);
+			color: rgba(0,0,0,0.6);
+			padding: 14px 20px;
+		}
+
+	}
+
+	.quantity {
+		input[type="number"] {
+			width: 60px;
+			text-align: center;
+			margin: 0 20px 0 0;
+			padding: 14px;
+		}
+	}
+
+}
+
+.product__accordion {
+
+	.tab {
+		position: relative;
+		margin-bottom: -1px;
+		width: 100%;
+		color: $darker;
+		overflow: hidden;
+		border-top: 1px solid $light;
+		border-bottom: 1px solid $light;
+	}
+
+	.tabl--description {
+
+	}
+
+	input {
+		position: absolute;
+		opacity: 0;
+		z-index: -1;
+	}
+
+	label {
+		position: relative;
+		display: block;
+		padding: 0;
+		margin: 0;
+		font-size: 20px;
+		font-weight: bold;
+		line-height: 3;
+		cursor: pointer;
+	}
+
+	.tab-content {
+		color: $dark;
+		max-height: 0;
+		overflow: hidden;
+		-webkit-transition: max-height .35s;
+		-o-transition: max-height .35s;
+		transition: max-height .35s;
+
+		&::after {
+			content: '';
+			display: block;
+			padding: 0 0 20px 0;
+		}
+
+	}
+
+	.tab-content p {
+		margin: 0 0 20px 0;
+
+		&:last-child {
+			margin: 0;
+		}
+
+	}
+
+	/* :checked */
+	input:checked ~ .tab-content {
+		max-height: 10em;
+	}
+
+	/* Icon */
+	label::after {
+		position: absolute;
+		right: 0;
+		top: 0;
+		display: block;
+		width: 3em;
+		height: 3em;
+		line-height: 3;
+		text-align: center;
+		-webkit-transition: all .35s;
+		-o-transition: all .35s;
+		transition: all .35s;
+	}
+
+	input[type=checkbox] + label::after {
+		content: "+";
+	}
+
+	input[type=radio] + label::after {
+		content: "\25BC";
+	}
+
+	input[type=checkbox]:checked + label::after {
+		transform: rotate(315deg);
+	}
+
+	input[type=radio]:checked + label::after {
+		transform: rotateX(180deg);
+	}
+}
+
+.product.has-default-attributes.has-children>.images {
+	opacity: 1;
+}
+
+.woocommerce-product-gallery {
+	margin-bottom: 50px;
+	margin-top: 0;
+}
+
+.woocommerce-product-gallery {
+	position: relative;
+
+	.zoomImg {
+		background-color: #fff;
+	}
+
+	.woocommerce-product-gallery__trigger {
+		position: absolute;
+		background: #fff;
+		top: 0px;
+		right: 0px;
+		display: block;
+		height: 40px;
+		width: 40px;
+		border-radius: 0;
+		z-index: 99;
+		text-align: center;
+	}
+
+	img {
+		margin: 0;
+		width: 100%;
+	}
+
+	.flex-viewport {
+		margin-bottom: 30px;
+	}
+
+	.flex-control-thumbs {
+		@include clearfix;
+		margin: 0;
+		padding: 0;
+
+		li {
+			list-style: none;
+			margin-bottom: 30px;
+			cursor: pointer;
+
+			img {
+				opacity: .5;
+				transition: all, ease, .2s;
+
+				&.flex-active {
+					opacity: 1;
+				}
+			}
+
+			&:hover {
+				img {
+					opacity: 1;
+				}
+			}
+		}
+	}
+
+	&.woocommerce-product-gallery--columns-2 {
+		.flex-control-thumbs {
+			li {
+				float: left;
+				width: 50%;
+
+				&:nth-child(2n) {
+					margin-right: 0;
+				}
+
+				&:nth-child(2n+1) {
+					clear: both;
+				}
+			}
+		}
+	}
+
+	&.woocommerce-product-gallery--columns-3 {
+		.flex-control-thumbs {
+			li {
+				float: left;
+				width: 33.333%;
+
+				&:nth-child(3n) {
+					margin-right: 0;
+				}
+
+				&:nth-child(3n+1) {
+					clear: both;
+				}
+			}
+		}
+	}
+
+	&.woocommerce-product-gallery--columns-4 {
+		.flex-control-thumbs {
+			li {
+				float: left;
+				width: 25%;
+
+				&:nth-child(4n) {
+					margin-right: 0;
+				}
+
+				&:nth-child(4n+1) {
+					clear: both;
+				}
+			}
+		}
+	}
+
+	&.woocommerce-product-gallery--columns-5 {
+		.flex-control-thumbs {
+			li {
+				float: left;
+				width: 20%;
+
+				&:nth-child(5n) {
+					margin-right: 0;
+				}
+
+				&:nth-child(5n+1) {
+					clear: both;
+				}
+			}
+		}
+	}
+}
+
+.images {
+	.woocommerce-main-image {
+		margin-bottom: 30px;
+		display: block;
+	}
+
+	.thumbnails {
+		a.zoom {
+			display: block;
+			width: 22.05%;
+			margin-right: 3.8%;
+			float: left;
+			margin-bottom: 1em;
+
+			&.last {
+				margin-right: 0;
+			}
+
+			&.first {
+				clear: both;
+			}
+		}
+	}
+}
+
+
+.related {
+	margin: 0;
+	clear: both;
+
+	ul.products {
+		li.product {
+			flex: 0 1 25%;
+    		width: 25%;
+		}
+	}
+}
+
+}

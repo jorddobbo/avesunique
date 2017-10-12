@@ -1,0 +1,20 @@
+.woocommerce {
+
+.widget_price_filter {
+    .ui-slider {
+        .ui-slider-handle {
+            position: absolute;
+            z-index: 2;
+            width: 8px;
+            height: 20px;
+            background-color: #f9b2dd;
+            border-radius: 4px;
+            cursor: ew-resize;
+            outline: 0;
+            top: -6px;
+            margin-left: -4px;
+        }
+    }
+}
+
+}

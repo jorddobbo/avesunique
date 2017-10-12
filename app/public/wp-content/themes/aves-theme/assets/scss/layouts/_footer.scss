@@ -1,0 +1,151 @@
+.footer {
+	background: $yellow url('../../assets/img/patterns/leaves.png') no-repeat 100% 50%/auto 100%;
+	font-size: 18px;
+}
+
+.footer__top {
+	display: flex;
+	justify-content: space-between;
+	padding: 50px 0 30px;
+	flex-direction: column;
+
+	h3 {
+		@include font-size(20px);
+		padding-top: 0;
+		margin: 0 0 25px 0;
+	}
+
+	@include media-query(min, $desk-start) {
+		flex-direction: row;
+	}
+
+}
+
+.footer__links {
+	order: 2;
+
+	ul {
+		margin: 0;
+    	padding: 0;
+    	list-style-type: none;
+	}
+
+	li {
+		margin: 0 0 8px 0;
+
+		a {
+			color: $dark;
+		}
+	}
+
+	.menu-footer-container {
+		& > ul {
+			& > li {
+				margin: 0 50px 0 0;
+
+				&:last-child {
+					margin: 0;
+				}
+
+				& > a {
+					display: inline-block;
+	    			font-weight: bold;
+	    			color: $darker;
+	    			@include font-size(20px);
+	    			padding-bottom: 15px;
+	    		}
+
+	    		@include media-query(min, $lap-start) {
+					margin: 0 100px 0 0;
+				}
+	    	}
+		}
+	}
+
+	.sub-menu {
+		
+	}
+
+	@include media-query(min, $desk-start) {
+		order: 1;
+	}
+
+}
+
+.footer__newsletter {
+	width: 100%;
+	order: 1;
+
+	.input--combined {
+		margin: 0 0 20px 0;
+	}
+
+	input[type="email"] {
+		border: 0;
+		font-size: 20px;
+		padding: 14px 20px;
+	}
+
+	button {
+		font-size: 20px;
+		background: #fff;
+		border-left: 1px solid $light;
+		font-weight: bold;
+		color: $dark;
+		padding: 14px 20px;
+	}
+
+	@include media-query(min, $desk-start) {
+		width: 40%;
+		order: 2;
+	}
+
+}
+
+.footer__social {
+	order: 3;
+
+	.icon--circle {
+		@include icon-circle(#fff);
+		width: 55px;
+		height: 55px;
+		line-height: 55px;
+		margin: 0 5px 0 0;
+
+		&::before {
+			font-size: 26px;
+		}
+	}
+}
+
+.footer__bottom {
+	display: flex;
+	padding: 30px 0;
+
+	p {
+		margin: 0;
+	}
+}
+
+.footer__left {
+	flex: 1;
+	text-align: left;
+}
+
+.footer__right {
+	flex: 1;
+	text-align: right;
+
+	p {
+		vertical-align: middle;
+	}
+
+	a {
+		display: inline-block;
+		margin: 0 50px 0 0;
+	}
+
+	svg {
+		vertical-align: middle;
+	}
+}

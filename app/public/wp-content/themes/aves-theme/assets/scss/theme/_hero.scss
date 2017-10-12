@@ -1,0 +1,75 @@
+.hero {
+	margin: 0 0 90px 0;
+}
+
+.hero__wrap {
+	position: relative;
+	width: calc(100% - ((100% - 1200px) / 2));
+	max-width: 95%;
+}
+
+.hero__arrows {
+	position: absolute;
+	bottom: 60px;
+	right: -46px;
+	z-index: 10;
+}
+
+.hero__next,
+.hero__prev {
+	@include button($purple);
+	color: rgba(0,0,0,.6);
+	display: inline-block;
+    font-size: 24px;
+    padding: 10px 11px;
+    float: left;
+}
+
+.hero__next {
+	border-radius: 0 4px 4px 0;
+	background-color: rgba(208, 213, 251, 0.3);
+}
+
+.hero__prev {
+	border-radius: 4px 0 0 4px;
+}
+
+.hero__inner {
+	position: relative;
+	background: $light;
+	width: 100%;
+	max-width: 100%;
+	padding: 0 0 50% 0;
+	background-size: cover;
+	background-position: 50% 50%;
+
+	.container {
+		position: absolute;
+	    top: 0;
+	    right: 0;
+	    bottom: 0;
+	    left: 0;
+	    display: flex;
+	    align-items: center;
+		max-width: 1200px;
+		margin-right: 0;
+		padding: 0;
+	}
+
+	.inner {
+		max-width: 320px;
+	}
+
+	h2 {
+		@include font-size(60px);
+		margin: 0 0 20px 0;
+		padding: 0;
+	}
+
+	.btn--underline {
+		@include button-underline($purple, 16px);
+		position: absolute;
+		bottom: 60px;
+	}
+
+}
