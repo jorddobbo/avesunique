@@ -1,6 +1,4 @@
 # Application
-app/public/wp-content/plugins/*
-!app/public/wp-content/plugins/.gitkeep
 app/public/wp-content/upgrade
 app/public/wp-content/uploads/*
 !app/public/wp-content/uploads/.gitkeep
