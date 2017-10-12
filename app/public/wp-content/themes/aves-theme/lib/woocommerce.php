@@ -4,7 +4,7 @@
 // GLOBAL
 // ------------------------------------------------
 
-add_theme_support( 'woocommerce' ); 
+add_theme_support( 'woocommerce' );
 
 // Remove WooCommerce CSS
 
