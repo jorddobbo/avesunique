@@ -74,7 +74,7 @@ add_action('widgets_init', __NAMESPACE__ . '\\widgets_init');
  * Theme assets
  */
 
-//add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' );
+add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' );
 
 function woo_css() {
 	wp_enqueue_style('woocommerce-general-custom', plugins_url() .'/woocommerce/assets/css/woocommerce.css');
