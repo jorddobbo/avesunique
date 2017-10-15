@@ -1,0 +1,132 @@
+.woocommerce-cart {
+
+.woocommerce__wrap {
+	margin-top: 60px;
+	margin-bottom: 60px;
+	@include clearfix();
+
+}
+
+table.cart {
+	border: 0;
+	margin: 0 0 15px 0;
+
+	th {
+	    font-weight: 700;
+	    font-size: 11px !important;
+	    padding: 9px 0;
+	    text-transform: uppercase;
+	    letter-spacing: 0.2em;
+	}
+
+	td {
+		padding: 10px 0;
+	}
+
+	.product-thumbnail {
+		width: 15%;
+		padding-right: 40px;
+
+		img {
+			width: auto;
+		}
+
+	}
+
+	.product-name {
+		font-size: 23px;
+		font-weight: bold;
+	    width: 28%;
+	    padding-right: 5%;
+	}
+
+	.product-price {
+		text-align: right;
+	}
+
+	.product-quantity {
+		text-align: right;
+	}
+
+	.product-subtotal {
+		font-size: 20px;
+		font-weight: bold;
+		text-align: right;
+		color: $darker;
+	}
+
+	td.actions {
+		padding: 20px 0 0 0;
+
+		.coupon {
+			float: left;
+			display: flex;
+
+			label {
+				display: none;
+			}
+
+			.input-text {
+				padding: 6px 10px;
+			    @include font-size($base-font-size);
+			    margin-right: 10px;
+			    line-height: $base-line-height;
+			    border: 1px solid $light;
+			    border-radius: $base-radius;
+			    appearance: none;
+			    background: #fff;
+
+			    &:hover, &:focus {
+			        outline: none;
+			    }
+			}
+		}
+
+		input[name="update_cart"] {
+			float: right;
+		}
+
+	}
+
+}
+
+.cart-collaterals {
+	width: 40%;
+    float: right;
+
+    .cart_totals {
+    	table {
+    		border: 0;
+
+    		th {
+    			padding: 15px 0;
+    		}
+
+    		td {
+    			padding: 15px 0;
+    			text-align: right;
+    		}
+    	}
+
+    	.order-total {
+    		font-size: 20px;
+    		color: $darker;
+    	}
+
+    	h2 {
+    		display: none;
+    	}
+    }
+
+}
+
+.wc-proceed-to-checkout {
+	a.checkout-button {
+		@include button($green, 20px);
+		color: rgba(0,0,0,0.6);
+		padding: 20px;
+		display: block;
+	}
+}
+
+}

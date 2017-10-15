@@ -26,7 +26,7 @@
               <a href="/my-account"><span class="icon--circle mdi mdi-account"></span></a>
             </div>
             <div class="header__basket">
-              <a href="/basket"><span class="icon--circle mdi mdi-basket"></span> Basket – £49.98</a>
+              <a href="/basket"><span class="icon--circle mdi mdi-basket"></span> Basket – <?php echo WC()->cart->get_cart_total(); ?></a>
             </div>
           </div>
         </div>
