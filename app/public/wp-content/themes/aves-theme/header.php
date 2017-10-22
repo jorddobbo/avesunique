@@ -13,7 +13,7 @@
 
         <div class="header__top">
           <div class="header__left">
-            <a class="search" href="/shop"><span class="icon--circle mdi mdi-magnify"></span></a>
+            <a class="search" href="<?= esc_url(home_url('/')); ?>shop"><span class="icon--circle mdi mdi-magnify"></span></a>
 
             <?php echo do_shortcode('[woocommerce_product_search]'); ?>
 
@@ -23,10 +23,10 @@
           </a>
           <div class="header__right">
             <div class="header__account">
-              <a href="/my-account"><span class="icon--circle mdi mdi-account"></span></a>
+              <a href="<?= esc_url(home_url('/')); ?>my-account"><span class="icon--circle mdi mdi-account"></span></a>
             </div>
             <div class="header__basket">
-              <a href="/basket"><span class="icon--circle mdi mdi-basket"></span> Basket – <?php echo WC()->cart->get_cart_total(); ?></a>
+              <a href="<?= esc_url(home_url('/')); ?>basket"><span class="icon--circle mdi mdi-basket"></span> Basket – <?php echo WC()->cart->get_cart_total(); ?></a>
             </div>
           </div>
         </div>
