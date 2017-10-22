@@ -8,17 +8,17 @@
 			<div class="hero__next"><span class="mdi mdi-arrow-right"></span></div>
 		</div>
 		<div class="hero">
-			<div class="hero__slide">
-				<div class="hero__inner" style="background-image: url('wp-content/themes/aves-theme/assets/img/homepage/banner_winter.jpg')">
+			<a href="<?php echo the_field('banner_url'); ?>" class="hero__slide">
+				<div class="hero__inner" style="background-image: url('<?php echo the_field('banner_image'); ?>')">
 					<div class="container">
 						<div class="inner">
-							<h2>New In<br/>For Winter</h2>
-							<p>Our new collection now available. Take a look and find something for your home this Winter.</p>
+							<h2><?php echo the_field('banner_title'); ?></h2>
+							<p><?php echo the_field('banner_paragraph'); ?></p>
 							<div class="btn--underline">Shop Now</div>
 						</div>
 					</div>
 				</div>
-			</div>
+			</a>
 			<div class="hero__slide">
 				<div class="hero__inner" style="background-image: url('wp-content/themes/aves-theme/assets/img/homepage/banner_winter.jpg')">
 					<div class="container">

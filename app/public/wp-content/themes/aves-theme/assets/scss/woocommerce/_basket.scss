@@ -1,12 +1,5 @@
 .woocommerce-cart {
 
-.woocommerce__wrap {
-	margin-top: 60px;
-	margin-bottom: 60px;
-	@include clearfix();
-
-}
-
 table.cart {
 	border: 0;
 	margin: 0 0 15px 0;
@@ -88,6 +81,70 @@ table.cart {
 
 	}
 
+	@include media-query('max', $lap-start) {
+
+		thead {
+		    display: none
+		}
+
+		tbody th {
+		    display: none
+		}
+
+		tr td {
+		    display: block;
+		    text-align: center;
+		    clear: both;
+		    border: 0;
+		}
+
+		tr td.product-remove a {
+		    text-align: left
+		}
+
+		tr td.product-remove:before {
+		    display: none
+		}
+
+		.product-thumbnail {
+			width: 100%;
+			padding-right: 0;
+			text-align: center;
+
+			img {
+				width: auto;
+			}
+
+		}
+
+		.product-name {
+		    width: 100%;
+		    padding-right: 0;
+		}
+
+		.product-price {
+			text-align: center;
+		}
+
+		.product-quantity {
+			text-align: center;
+		}
+
+		.product-subtotal {
+			text-align: center;
+		}
+
+		tr td.actions:before,
+		tr td.download-actions:before {
+		    display: none
+		}
+
+		tr td.download-actions .button {
+		    display: block;
+		    text-align: center
+		}
+	}
+
 }
 
 .cart-collaterals {
@@ -127,6 +184,23 @@ table.cart {
 		padding: 20px;
 		display: block;
 	}
+}
+
+&--empty {
+	padding: 80px 0;
+	text-align: center;
+
+	.cart-empty {
+		margin: 0 0 20px 0;
+	}
+}
+
+table.shop_table_responsive.my_account_orders .order-actions {
+    text-align: right
+}
+
+table.shop_table_responsive.my_account_orders .order-actions:before {
+    display: none
 }
 
 }

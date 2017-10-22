@@ -2,7 +2,7 @@
     margin: 0 auto;
     padding-right: 15px;
     padding-left: 15px;
-    width: auto;
+    width: 95%;
     max-width: $page-width;
 
     @include media-query(min, $lap-start) {

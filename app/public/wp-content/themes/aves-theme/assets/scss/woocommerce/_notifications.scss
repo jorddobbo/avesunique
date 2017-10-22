@@ -1,0 +1,54 @@
+.woocommerce-error,
+.woocommerce-info,
+.woocommerce-message {
+	background-color: $light;
+	padding: 20px 20px 20px 60px;
+	display: flex;
+    align-items: center;
+    border-top: 0;
+    border-radius: $base-radius;
+
+    a.button {
+    	order: 2;
+    	margin: 0 0 0 auto;
+    }
+
+    &::before {
+    	top: 50%;
+	    left: 23px;
+	    margin-top: -13px;
+    }
+
+    li {
+    	display: flex;
+	    width: 100%;
+	    align-items: center;
+    }
+}
+
+.woocommerce-error {
+	background-color: rgba($pink, .3);
+
+	a.button {
+		background-color: $pink;
+		color: rgba(#000, 0.6);
+	}
+}
+
+.woocommerce-info {
+	background-color: rgba($purple, .3);
+
+	a.button {
+		background-color: $purple;
+		color: rgba(#000, 0.6);
+	}
+}
+
+.woocommerce-message {
+	background-color: rgba($green, .3);
+
+	a.button {
+		background-color: $green;
+		color: rgba(#000, 0.6);
+	}
+}

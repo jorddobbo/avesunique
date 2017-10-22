@@ -1,0 +1,19 @@
+.woocommerce-checkout {
+
+.woocommerce__wrap {
+	max-width: 600px;
+}
+
+.woocommerce-checkout-payment {
+
+	.button.alt {
+		@include button($green, 20px);
+		display: block;
+		width: 100%;
+		color: rgba(#000, 0.6);
+		padding: 20px;
+	}
+
+}
+
+}

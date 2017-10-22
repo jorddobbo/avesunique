@@ -21,38 +21,41 @@ h6, .h6 {
 }
 
 h1, .h1 {
-    @include font-size(30px);
+    font-size: 30px;
+    line-height: 30px;
     margin-bottom: 20px;
 
     @include media-query(min, $desk-start){
-        @include font-size(40px);
+        font-size: 40px;
+        line-height: 45px;
     }
 }
 
 h2, .h2 {
-    @include font-size(20px);
+    font-size: 20px;
+    line-height: 20px;
     padding-top: 20px;
 
     @include media-query(min, $desk-start){
-        @include font-size(30px);
+        font-size: 30px;
+        line-height: 35px;
     }
 }
 
 h3, .h3 {
-    @include font-size($base-font-size);
+    font-size: $base-font-size;
+    line-height: $base-font-size;
     margin-bottom: 15px;
 
     @include media-query(min, $desk-start){
-        @include font-size(20px);
+        font-size: 20px;
+        line-height: 25px;
     }
 }
 
 h4, .h4 {
-    @include font-size($base-font-size);
-
-    @include media-query(min, $desk-start){
-        @include font-size(16px);
-    }
+    font-size: $base-font-size;
+    line-height: $base-font-size;
 }
 
 .section__title {
@@ -95,6 +98,8 @@ h4, .h4 {
     }
 
     .icon {
+        margin-top: 10px;
+
         &::before {
             color: #f9b2dd;
             font-size: 25px;

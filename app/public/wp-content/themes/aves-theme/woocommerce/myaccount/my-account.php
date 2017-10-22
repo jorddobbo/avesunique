@@ -20,6 +20,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 } ?>
 
+<div class="shop__banner">
+	<div class="container">
+		<h1>Hello <?php printf(esc_html( $current_user->display_name )) ?></h1>
+		<p>Welcome to your account area.</p>
+	</div>
+</div>
+
 <div class="woocommerce__wrap container">
 
 <?php wc_print_notices();
