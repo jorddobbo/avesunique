@@ -41,6 +41,11 @@ export default function() {
 			header.find('.nav-primary').toggleClass('show');
 		});
 
+		$('.sidebar__toggle').click(function () {
+			$(this).toggleClass('show');
+		    $('.sidebar__inner').toggleClass('show');
+		});
+
 	});
 
 }

@@ -7,13 +7,18 @@
 }
 
 .page__wrapper {
-	padding-top: 50px;
-	padding-bottom: 50px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+
+	@include media-query(min, $lap-start) {
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
 }
 
 .shop__banner {
 	background: rgba($purple, .3);
-	padding: 30px 0;
+	padding: 22px 0 30px;
 	margin: 0 0 35px 0;
 	text-align: center;
 

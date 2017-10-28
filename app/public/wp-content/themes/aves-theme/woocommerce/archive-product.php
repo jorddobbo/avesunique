@@ -58,7 +58,10 @@ get_header( 'shop' ); ?>
 		    </header>
 
 		    <div class="shop__sidebar">
-		    	<?php dynamic_sidebar( 'Woocommerce' ); ?>
+		    	<div class="sidebar__toggle">Filter by</div>
+		    	<div class="sidebar__inner">
+		    		<?php dynamic_sidebar( 'Woocommerce' ); ?>
+		    	</div>
 		    </div>
 
 		    <div class="shop__wrap">
