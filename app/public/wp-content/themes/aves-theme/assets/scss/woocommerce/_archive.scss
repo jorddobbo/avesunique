@@ -1,7 +1,9 @@
 .woocommerce.archive {
 
 .shop__banner {
-	margin: 0;
+	@include media-query(max, $lap-start) {
+		margin: 0;
+	}
 }
 
 .shop__sidebar {
@@ -39,6 +41,10 @@
     border-bottom: 1px solid #eaeaea;
     margin: 0 -10px 10px -10px;
     background: url(../img/icons/chevron-down.svg) 97% center no-repeat;
+
+    @include media-query(min, $lap-start) {
+		display: none;
+	}
 }
 
 .widget_product_categories {

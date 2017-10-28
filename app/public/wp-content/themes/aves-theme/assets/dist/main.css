@@ -6091,8 +6091,9 @@ body#tinymce {
       line-height: 55px;
       padding: 0;
       border-radius: 500px; }
-.woocommerce.archive .shop__banner {
-  margin: 0; }
+@media only screen and (max-width: 679px) {
+  .woocommerce.archive .shop__banner {
+    margin: 0; } }
 .woocommerce.archive .shop__sidebar .widget {
   margin: 0 0 30px 0; }
 @media only screen and (min-width: 850px) {
@@ -6115,6 +6116,9 @@ body#tinymce {
   border-bottom: 1px solid #eaeaea;
   margin: 0 -10px 10px -10px;
   background: url(../img/icons/chevron-down.svg) 97% center no-repeat; }
+@media only screen and (min-width: 680px) {
+    .woocommerce.archive .sidebar__toggle {
+      display: none; } }
 .woocommerce.archive .widget_product_categories {
   border: 1px solid #EAEAEA;
   padding: 20px; }

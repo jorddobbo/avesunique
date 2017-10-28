@@ -12721,11 +12721,6 @@ exports.default = function () {
 			appendDots: $('.hero__outer')
 		});
 
-		// $('select').selectBox({
-		//     mobile: true,
-		//     menuSpeed: 'fast'
-		// });
-
 		$('header').on('click', '.header__search', function (event) {
 			var header = $('header');
 
