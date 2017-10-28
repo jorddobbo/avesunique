@@ -101,14 +101,17 @@ get_header( 'shop' ); ?>
 
 					<?php woocommerce_product_loop_end(); ?>
 
-					<?php
-						/**
-						 * woocommerce_after_shop_loop hook.
-						 *
-						 * @hooked woocommerce_pagination - 10
-						 */
-						do_action( 'woocommerce_after_shop_loop' );
-					?>
+					<div class="shop__sort-bar--bottom">
+
+						<?php
+							/**
+							 * woocommerce_after_shop_loop hook.
+							 *
+							 * @hooked woocommerce_pagination - 10
+							 */
+							do_action( 'woocommerce_after_shop_loop' );
+						?>
+					</div>
 
 				<?php elseif ( ! woocommerce_product_subcategories( array( 'before' => woocommerce_product_loop_start( false ), 'after' => woocommerce_product_loop_end( false ) ) ) ) : ?>
 

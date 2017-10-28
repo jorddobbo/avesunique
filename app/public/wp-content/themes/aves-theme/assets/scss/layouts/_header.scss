@@ -3,6 +3,7 @@
 }
 
 .header__top {
+	position: relative;
 	border-bottom: 1px solid $light;
 	display: flex;
 	width: 100%;
@@ -10,21 +11,24 @@
 
 .header__left {
 	margin: 0 auto 0 0;
-	padding: 0 0 0 20px;
+	padding: 0 0 0 10px;
 	flex: 1;
 	display: flex;
 	align-items: center;
 
 	.icon--circle {
 		@include icon-circle($purple);
-		margin: 0 5px 0 0;
 	}
 
 	.product-search {
-		width: 100%;
-		max-width: 300px;
-		margin: 0 0 0 10px;
-		opacity: 0;
+		position: absolute;
+	    top: 100%;
+	    left: 0;
+	    right: 0;
+	    max-width: none;
+	    width: auto;
+	    margin: 0;
+	    opacity: 0;
 		visibility: hidden;
 
 		&.show {
@@ -32,64 +36,140 @@
 			visibility: visible;
 		}
 
+		.icon--circle {
+			margin: 0;
+		}
+
+	}
+
+	@include media-query(max, $desk-start) {
+		.product-search.floating {
+			top: 100%;
+		    left: 0;
+		    width: 100%;
+		    position: absolute;
+		    padding: 0 10px 10px;
+		    background: #ffffff;
+		}
+
+		.product-search input[type="text"].product-search-field {
+			width: 100%;
+		}
+	}
+
+	@include media-query(min, $desk-start) {
+		padding: 0 0 0 20px;
+
+		.product-search {
+			width: 100%;
+			max-width: 300px;
+			margin: 0 0 0 10px;
+			right: 0;
+		}
 	}
 
 }
 
+.header__menu {
+	display: block;
+	margin: 0 10px 0 0;
+
+	.icon--circle {
+		background-color: $yellow;
+	}
+
+	@include media-query(min, $desk-start) {
+        display: none;
+    }
+}
+
 .header__right {
-	margin: 0 0 0 auto;
+	margin: 0 10px 0 auto;
 	flex: 1;
 	text-align: right;
 	display: flex;
 	justify-content: flex-end;
+
+	@include media-query(min, $desk-start) {
+		margin: 0 0 0 auto;
+	}
 }
 
 .header__account {
 	display: flex;
 	align-items: center;
-	padding: 0 20px 0 0;
 
 	.icon--circle {
 		@include icon-circle($peach);
 	}
+
+	@include media-query(min, $desk-start) {
+        padding: 0 20px 0 0;
+    }
 }
 
 .header__basket {
-	border-left: 1px solid $light;
 	display: flex;
 	align-items: center;
 
 	a {
-		padding: 0 20px;
+		padding: 0 0 0 10px;
 	}
 
 	.icon--circle {
 		@include icon-circle($green);
-		margin: 0 5px 0 0;
+		margin: 0;
 	}
+
+	.info {
+		display: none;
+	}
+
+	@include media-query(min, $desk-start) {
+        border-left: 1px solid $light;
+
+        a {
+        	padding: 0 20px;
+        }
+
+        .info {
+        	display: inline-block;
+        }
+
+        .icon--circle {
+			@include icon-circle($green);
+			margin: 0 5px 0 0;
+		}
+    }
+
 }
 
 .brand {
 	margin: 10px auto;
-	flex: 1;
+	flex: 0.6;
 
 	.logo {
-		width: 100px;
+		width: 150px;
 		display: block;
 		margin: 0 auto;
-
-		@include media-query(min, $lap-start) {
-	        width: 150px;
-	    }
-
-	    @include media-query(min, $desk-start) {
-	        width: 250px;
-	    }
 	}
+
+	@include media-query(min, $lap-start) {
+		.logo {
+        	width: 150px;
+        }
+    }
+
+	@include media-query(min, $wide-start) {
+		.logo {
+        	width: 200px;
+        }
+    }
 
 }
 
 .nav-primary {
+
 	.nav {
 		justify-content: center;
 	}
@@ -112,5 +192,73 @@
 			font-weight: bold;
 			box-shadow: inset 0 -3px 0 $purple;
 		}
+	}
+
+	@include media-query(max, $desk-start) {
+		position: fixed;
+	    top: 0;
+	    left: -150px;
+	    bottom: 0;
+	    background: #fff;
+	    z-index: 999;
+	    width: 80%;
+		opacity: 0;
+		visibility: hidden;
+		pointer-events: none;
+		transition: $base-transition;
+
+		&.show {
+			left: 0;
+			opacity: 1;
+			visibility: visible;
+			pointer-events: auto;
+		}
+
+	    .nav {
+	    	display: block;
+	    	text-align: left;
+
+	    	li {
+	    		text-align: left;
+	    		border-bottom: 1px solid $light;
+	    		margin: 0;
+
+	    		a {
+	    			padding: 12px 20px;
+	    		}
+	    	}
+	    }
+	}
+}
+
+.menu-mobile-container {
+	display: block;
+
+	@include media-query(min, $desk-start) {
+		display: none;
+	}
+}
+
+.header__overlay {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(#111, 0.7);
+	z-index: 100;
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
+	transition: $base-transition;
+
+	&.show {
+		opacity: 1;
+		visibility: visible;
+		pointer-events: auto;
+	}
+
+	@include media-query(min, $desk-start) {
+		display: none;
 	}
 }

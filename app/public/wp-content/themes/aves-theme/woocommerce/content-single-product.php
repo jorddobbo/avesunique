@@ -38,6 +38,16 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <div id="product-<?php the_ID(); ?>" <?php post_class(); ?>>
 
+	<?php
+		/**
+		 * woocommerce_before_single_product_summary hook.
+		 *
+		 * @hooked woocommerce_show_product_sale_flash - 10
+		 * @hooked woocommerce_show_product_images - 20
+		 */
+		do_action( 'woocommerce_aves_breadcrumbs' );
+	?>
+
 	<div class="product__images">
 
 		<?php

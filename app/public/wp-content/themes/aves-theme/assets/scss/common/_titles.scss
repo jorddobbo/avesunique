@@ -61,19 +61,20 @@ h4, .h4 {
 .section__title {
     position: relative;
     text-align: center;
-    margin: 0 0 40px 0;
+    margin: 0 0 20px 0;
 
     .sub {
         display: block;
         color: $dark;
-        font-size: 16px;
+        font-size: 11px;
         letter-spacing: 0.3em;
         text-transform: uppercase;
     }
 
     .main {
-        @include font-size(40px);
-        padding: 0;
+        @include font-size(30px);
+        line-height: 30px;
+        padding: 10px 0 5px 0;
         position: relative;
 
         span {
@@ -105,4 +106,19 @@ h4, .h4 {
             font-size: 25px;
         }
     }
+
+    @include media-query(min, $lap-start){
+        margin: 0 0 40px 0;
+
+        .sub {
+            font-size: 16px;
+            line-height: 16px;
+        }
+
+        .main {
+            font-size: 40px;
+            line-height: 40px;
+        }
+    }
+
 }

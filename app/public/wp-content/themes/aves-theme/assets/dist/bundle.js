@@ -12716,7 +12716,9 @@ exports.default = function () {
 
 		$('.hero').slick({
 			prevArrow: $('.hero__prev'),
-			nextArrow: $('.hero__next')
+			nextArrow: $('.hero__next'),
+			dots: true,
+			appendDots: $('.hero__outer')
 		});
 
 		// $('select').selectBox({
@@ -12724,12 +12726,28 @@ exports.default = function () {
 		//     menuSpeed: 'fast'
 		// });
 
-		$('header').on('click', '.search', function (event) {
+		$('header').on('click', '.header__search', function (event) {
 			var header = $('header');
 
 			event.preventDefault();
 			header.find('.product-search').toggleClass('show');
 			header.find('.product-search-field').focus();
+		});
+
+		$('header').on('click', '.header__menu', function (event) {
+			var header = $('header');
+
+			event.preventDefault();
+			header.find('.nav-primary').toggleClass('show');
+			$('.header__overlay').toggleClass('show');
+		});
+
+		$('body').on('click', '.header__overlay', function (event) {
+			var header = $('header');
+
+			event.preventDefault();
+			$(this).toggleClass('show');
+			header.find('.nav-primary').toggleClass('show');
 		});
 	});
 };

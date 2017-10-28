@@ -1,5 +1,69 @@
-.hero {
-	margin: 0 0 90px 0;
+.hero__outer {
+	position: relative;
+
+	.slick-dots {
+		position: static;
+		right: 1%;
+	    top: 50%;
+	    bottom: auto;
+	    width: auto;
+	    transform: translateY(-50%);
+	    text-align: left;
+	    padding-right: 3px;
+	    padding-left: 3px;
+	    width: 95%;
+	    max-width: 1200px;
+	    margin: 0 auto;
+
+	    li {
+	    	display: inline-block;
+	    	height: auto;
+	    	width: auto;
+	    	margin: 0;
+
+	    	button {
+	    		width: auto;
+	    		height: auto;
+	    		margin: 0 5px;
+	    	}
+
+    		button::before {
+    			position: static;
+	    		content: '';
+	    		background-color: #fff;
+	    		border: 1px solid darken($light, 30%);
+	    		border-radius: 50px;
+	    		width: 15px;
+	    		height: 15px;
+	    		display: block;
+	    	}
+
+	    	&.slick-active button::before {
+	    		background-color: $purple;
+	    		border: 1px solid $purple;
+	    	}
+	    }
+
+	    @include media-query(min, $lap-start) {
+	    	position: absolute;
+	    	right: 1%;
+		    top: 50%;
+		    bottom: auto;
+		    width: auto;
+		    transform: translateY(-50%);
+		    text-align: center;
+		    padding-right: 0;
+		    padding-left: 0;
+
+		    li {
+		    	display: block;
+
+		    	button {
+		    		margin: 5px 0;
+		    	}
+		    }
+	    }
+	}
 }
 
 .hero__wrap {
@@ -9,10 +73,15 @@
 }
 
 .hero__arrows {
+	display: none;
 	position: absolute;
 	bottom: 60px;
 	right: -46px;
 	z-index: 10;
+
+	@include media-query(min, $lap-start) {
+		display: block;
+	}
 }
 
 .hero__next,
@@ -34,8 +103,58 @@
 	border-radius: 4px 0 0 4px;
 }
 
+.hero {
+	margin: 0 0 30px 0;
+
+	@include media-query(min, $lap-start) {
+		margin: 0 0 90px 0;
+	}
+}
+
 .hero__slide {
 	display: block;
+
+	.container--desktop {
+		display: none;
+	}
+
+	.container--mobile {
+		display: block;
+
+		h2 {
+			font-size: 30px;
+			line-height: 30px;
+			margin: 0 0 10px 0;
+
+			br {
+				display: none;
+			}
+		}
+
+		p {
+			margin: 0 0 10px 0;
+		}
+	}
+
+	@include media-query(min, $lap-start) {
+
+		.container--desktop {
+			position: absolute;
+		    top: 0;
+		    right: 0;
+		    bottom: 0;
+		    left: 0;
+		    display: flex;
+		    align-items: center;
+			max-width: 1200px;
+			margin-right: 0;
+			padding: 0;
+		}
+
+		.container--mobile {
+			display: none;
+		}
+	}
 }
 
 .hero__inner {
@@ -47,34 +166,40 @@
 	background-size: cover;
 	background-position: 50% 50%;
 
-	.container {
-		position: absolute;
-	    top: 0;
-	    right: 0;
-	    bottom: 0;
-	    left: 0;
-	    display: flex;
-	    align-items: center;
-		max-width: 1200px;
-		margin-right: 0;
-		padding: 0;
-	}
-
 	.inner {
-		max-width: 320px;
+		max-width: 230px;
 	}
 
 	h2 {
-		@include font-size(60px);
-		line-height: 60px;
-		margin: 0 0 20px 0;
+		@include font-size(30px);
+		line-height: 30px;
+		margin: 0 0 10px 0;
 		padding: 0;
 	}
 
 	.btn--underline {
 		@include button-underline($purple, 16px);
-		position: absolute;
-		bottom: 60px;
+		position: relative;
+		bottom: auto;
+	}
+
+	@include media-query(min, $desk-start) {
+
+		.inner {
+			max-width: 320px;
+		}
+
+		h2 {
+			@include font-size(60px);
+			line-height: 60px;
+			margin: 0 0 20px 0;
+		}
+
+		.btn--underline {
+			@include button-underline($purple, 16px);
+			position: absolute;
+			bottom: 60px;
+		}
 	}
 
 }

@@ -21,7 +21,8 @@ function setup() {
 	// http://codex.wordpress.org/Function_Reference/register_nav_menus
 	register_nav_menus([
 		'primary_navigation' => __('Primary Navigation', 'aves'),
-		'secondary_navigation' => __('Secondary Navigation', 'aves')
+		'secondary_navigation' => __('Secondary Navigation', 'aves'),
+		'mobile_navigation' => __('Mobile Navigation', 'aves')
 	]);
 
 	// Enable post thumbnails

@@ -13,7 +13,7 @@
 
 .shop__banner {
 	background: rgba($purple, .3);
-	padding: 70px 0;
+	padding: 30px 0;
 	margin: 0 0 35px 0;
 	text-align: center;
 
@@ -26,6 +26,10 @@
 		margin: 0;
 		padding: 0;
 	}
+
+	@include media-query(min, $lap-start) {
+		padding: 70px 0;
+	}
 }
 
 ul.products {
@@ -33,7 +37,7 @@ ul.products {
 	flex-wrap: wrap;
 	list-style-type: none;
 	justify-content: space-between;
-	margin: 0 -15px;
+	margin: 0 -5px;
 
 	&::before {
 		display: none;
@@ -49,7 +53,7 @@ ul.products {
 		flex: 0 1 50%;
 		width: 50%;
 		margin: 0 0 40px 0;
-		padding: 0 15px;
+		padding: 0 5px;
 		@include clearfix();
 
 		a {
@@ -58,19 +62,22 @@ ul.products {
 		}
 
 		.product__image {
-			background: #f6f6f6;
+			background: #f9f9f9;
+			padding: 0 0 100% 0;
+			position: relative;
+			margin: 0 0 15px 0;
 		}
 
-		img {
+		a img {
 			width: 100%;
-			margin: 0 0 20px 0;
+			height: 100%;
 			mix-blend-mode: multiply;
+			position: absolute;
+		    object-fit: contain;
 		}
 
 		.woocommerce-loop-product__title {
 			@include font-size($base-font-size);
-			width: 75%;
-			float: left;
 			margin: 0;
 			padding: 0;
 		}
@@ -78,14 +85,26 @@ ul.products {
 		.price {
 			@include font-size($base-font-size);
 			color: $dark;
-			width: 25%;
-			text-align: right;
-			float: right;
 		}
 
 		@include media-query('min', $lap-start) {
+
+			.woocommerce-loop-product__title {
+				width: 75%;
+				float: left;
+			}
+
+			.price {
+				width: 25%;
+				text-align: right;
+				float: right;
+			}
+		}
+
+		@include media-query('min', $wide-start) {
 			flex: 0 1 33.3333%;
 			width: 33.3333%;
+			padding: 0 15px;
 		}
 
 	}
@@ -93,10 +112,45 @@ ul.products {
 }
 
 &.columns-4 {
+	padding: 0 0 40px 0;
+
 	ul.products {
 		li.product {
-			flex: 0 1 25%;
-			width: 25%;
+
+			@include media-query('min', $lap-start) {
+				flex: 0 1 25%;
+				width: 25%;
+			}
+		}
+	}
+}
+
+nav.woocommerce-pagination {
+	ul {
+		border: 0;
+
+		li {
+			border: 0;
+
+			span.current {
+				width: 55px;
+				height: 55px;
+				border: 55px;
+				background-color: $peach;
+				color: $darker;
+				line-height: 55px;
+				padding: 0;
+				border-radius: 500px;
+			}
+
+			a {
+				width: 55px;
+				height: 55px;
+				color: $dark;
+				line-height: 55px;
+				padding: 0;
+				border-radius: 500px;
+			}
 		}
 	}
 }
