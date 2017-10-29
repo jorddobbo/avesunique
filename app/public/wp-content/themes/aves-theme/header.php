@@ -29,7 +29,7 @@
               <a href="<?= esc_url(home_url('/')); ?>my-account"><span class="icon--circle mdi mdi-account"></span></a>
             </div>
             <div class="header__basket">
-              <a href="<?= esc_url(home_url('/')); ?>basket"><span class="icon--circle mdi mdi-basket"></span> <span class="info">Basket – <?php echo WC()->cart->get_cart_total(); ?></span></a>
+              <a href="<?= esc_url(home_url('/')); ?>basket"><span class="icon--circle mdi mdi-basket"><div class="cart-count"><?php echo sprintf ( _n( '%d', '%d', WC()->cart->get_cart_contents_count() ), WC()->cart->get_cart_contents_count() ); ?></div></span> <span class="info">Basket – <?php echo WC()->cart->get_cart_total(); ?></span></a>
             </div>
           </div>
         </div>

@@ -5,6 +5,7 @@
 
 .footer__top {
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-between;
 	padding: 50px 0 30px;
 	flex-direction: column;
@@ -23,6 +24,7 @@
 
 .footer__links {
 	order: 2;
+	margin: 0 0 30px 0;
 
 	ul {
 		margin: 0;
@@ -75,6 +77,7 @@
 .footer__newsletter {
 	width: 100%;
 	order: 1;
+	margin: 0 0 30px 0;
 
 	.input--combined {
 		margin: 0 0 20px 0;
@@ -119,30 +122,47 @@
 }
 
 .footer__bottom {
-	display: flex;
-	padding: 30px 0;
+	padding: 0 0 30px 0;
 
 	p {
 		margin: 0;
+	}
+
+	@include media-query(min, $lap-start) {
+		padding: 30px 0;
+		display: flex;
 	}
 }
 
 .footer__left {
 	flex: 1;
 	text-align: left;
+	margin: 0 0 10px 0;
+
+	@include media-query(min, $lap-start) {
+		margin: 0;
+	}
 }
 
 .footer__right {
-	flex: 1;
-	text-align: right;
 
 	p {
 		vertical-align: middle;
 	}
 
 	a {
-		display: inline-block;
-		margin: 0 50px 0 0;
+		display: block;
+		margin: 0 0 10px 0;
+	}
+
+	@include media-query(min, $lap-start) {
+		flex: 1;
+		text-align: right;
+
+		a {
+			display: inline-block;
+			margin: 0 50px 0 0;
+		}
 	}
 
 	svg {

@@ -5,7 +5,7 @@
     width: auto;
     vertical-align: middle;
     background-color: $colour;
-    color: #fff;
+    color: rgba(#111, 0.6);
     font-weight: bold;
     @include font-size($font-size);
     text-align: center;
@@ -18,7 +18,7 @@
     &:hover,
     &:focus {
         outline: none;
-        color: #fff;
+        color: rgba(#111, 0.6);
         background-color: darken($colour, 10%);
     }
 
