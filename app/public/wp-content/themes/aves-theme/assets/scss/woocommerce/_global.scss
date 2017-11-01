@@ -61,6 +61,10 @@ ul.products {
 		padding: 0 5px;
 		@include clearfix();
 
+		@supports (object-fit: contain) {
+		    background: white;
+		}
+
 		a {
 			display: block;
     		position: relative;
@@ -71,6 +75,40 @@ ul.products {
 			padding: 0 0 100% 0;
 			position: relative;
 			margin: 0 0 15px 0;
+			transition: all .5s ease;
+
+			&.compat-object-fit {
+			    background-size: contain;
+			    background-position: center center;
+			    background-repeat: no-repeat;
+			    background-blend-mode: multiply;
+
+			   img {
+			    	opacity: 0 !important;
+			   }
+			}
+		}
+
+		.product__hover-image {
+			background: #f9f9f9;
+			padding: 0 0 100% 0;
+			position: absolute;
+			left: 0;
+			top: 0;
+			right: 0;
+			opacity: 0;
+			transition: all .5s ease;
+			z-index: 2;
+
+			&.compat-object-fit {
+			    background-size: contain;
+			    background-position: center center;
+			    background-repeat: no-repeat;
+
+			   img {
+			    	opacity: 0 !important;
+			   }
+			}
 		}
 
 		a img {
@@ -114,6 +152,10 @@ ul.products {
 
 	}
 
+}
+
+&:not(.single-product) ul.products li.pif-has-gallery a.woocommerce-loop-product__link:hover .product__hover-image {
+	opacity: 1;
 }
 
 &.columns-4 {

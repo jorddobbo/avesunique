@@ -1,4 +1,5 @@
 import selectBox from './selectbox.js';
+import objectfit from './mdnzr_object-fit.js';
 
 export default function() {
 
@@ -40,6 +41,22 @@ export default function() {
 			$(this).toggleClass('show');
 		    $('.sidebar__inner').toggleClass('show');
 		});
+
+		if (!CSS.supports("object-fit", "contain")) {
+		  $('.woocommerce-loop-product__link').each(function () {
+		    var $container = $(this).find('.product__image'),
+		        imgUrl = $container.find('img').prop('src'),
+		        hoverImg = $(this).find('.secondary-image'),
+		        hoverUrl = hoverImg.prop('src');
+		    if (imgUrl) {
+		      $container
+		        .css('backgroundImage', 'url(' + imgUrl + ')')
+		        .addClass('compat-object-fit');
+		       hoverImg.wrap("<div class='product__hover-image'></div>");
+		       $(this).find('.product__hover-image').addClass('compat-object-fit').css('backgroundImage', 'url(' + hoverUrl + ')');
+		    }  
+		  });
+		};
 
 	});
 
