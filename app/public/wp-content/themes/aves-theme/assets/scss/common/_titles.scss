@@ -122,3 +122,20 @@ h4, .h4 {
     }
 
 }
+
+.title__banner {
+    background: rgba($purple, .3) url('../../assets/img/patterns/crosses.svg') no-repeat 0 50%/auto 100%;
+    padding: 22px 0 30px;
+    margin: 0 0 35px 0;
+    text-align: center;
+
+    h1 {
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    @include media-query(min, $lap-start) {
+        padding: 70px 0;
+    }
+}

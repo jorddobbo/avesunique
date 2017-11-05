@@ -4840,6 +4840,18 @@ h4, .h4 {
       .section__title .main {
         font-size: 40px;
         line-height: 40px; } }
+.title__banner {
+  background: rgba(208, 213, 251, 0.3) url("../../assets/img/patterns/crosses.svg") no-repeat 0 50%/auto 100%;
+  padding: 22px 0 30px;
+  margin: 0 0 35px 0;
+  text-align: center; }
+.title__banner h1 {
+    text-align: center;
+    margin: 0;
+    padding: 0; }
+@media only screen and (min-width: 680px) {
+    .title__banner {
+      padding: 70px 0; } }
 .nav {
   display: -webkit-box;
   display: -webkit-flex;
