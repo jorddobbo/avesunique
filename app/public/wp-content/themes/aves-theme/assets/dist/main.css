@@ -5926,9 +5926,9 @@ body#tinymce {
 @media only screen and (min-width: 680px) {
     .block--long {
       -webkit-box-flex: 0;
-      -webkit-flex: 0 0 calc(66.66% - 16px);
-          -ms-flex: 0 0 calc(66.66% - 16px);
-              flex: 0 0 calc(66.66% - 16px);
+      -webkit-flex: 0 0 auto;
+          -ms-flex: 0 0 auto;
+              flex: 0 0 auto;
       width: calc(66.66% - 16px);
       background: rgba(234, 234, 234, 0.3);
       display: -webkit-box;
@@ -5951,15 +5951,11 @@ body#tinymce {
       padding: 35px; } }
 .block--short {
   -webkit-box-flex: 0;
-  -webkit-flex: 0 0 calc(50% - 5px);
-      -ms-flex: 0 0 calc(50% - 5px);
-          flex: 0 0 calc(50% - 5px);
+  -webkit-flex: 0 0 auto;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
   width: calc(50% - 5px);
   background: rgba(234, 234, 234, 0.3);
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
@@ -5980,9 +5976,9 @@ body#tinymce {
 @media only screen and (min-width: 680px) {
     .block--short {
       -webkit-box-flex: 0;
-      -webkit-flex: 0 0 calc(33.33% - 16px);
-          -ms-flex: 0 0 calc(33.33% - 16px);
-              flex: 0 0 calc(33.33% - 16px);
+      -webkit-flex: 0 0 auto;
+          -ms-flex: 0 0 auto;
+              flex: 0 0 auto;
       width: calc(33.33% - 16px);
       margin: 16px 0; }
       .block--short h3 {
@@ -6412,7 +6408,7 @@ body#tinymce {
 .woocommerce .product .product__accordion .tab-content p:last-child {
       margin: 0; }
 .woocommerce .product .product__accordion input:checked ~ .tab-content {
-    max-height: 30em; }
+    max-height: 3000px; }
 .woocommerce .product .product__accordion label::after {
     position: absolute;
     right: 0;
