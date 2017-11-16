@@ -56,35 +56,35 @@
 				<div class="promo-block promo-block--one">
 					<a href="#" class="block--long">
 						<div class="image">
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/img/homepage/block_fox.png">
+							<img src="<?php echo get_template_directory_uri(); ?>/assets/img/homepage/block_rooster.png">
 						</div>
 						<div class="inner">
-							<h3>Animal<br>Sculptures</h3>
+							<h3>Outdoors</h3>
 							<div class="btn--underline">Shop Now</div>
 						</div>
 					</a>
 					<a href="#" class="block--short">
 						<div class="image">
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/img/homepage/block_planters.png">
+							<img src="<?php echo get_template_directory_uri(); ?>/assets/img/homepage/block_homeware.png">
 						</div>
 						<div class="inner">
-							<h3>Planters</h3>
+							<h3>Homeware</h3>
 						</div>
 					</a>
 					<a href="#" class="block--short">
 						<div class="image">
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/img/homepage/block_gallery.png">
+							<img src="<?php echo get_template_directory_uri(); ?>/assets/img/homepage/block_art.png">
 						</div>
 						<div class="inner">
-							<h3>Gallery</h3>
+							<h3>Art Gallery</h3>
 						</div>
 					</a>
 					<a href="#" class="block--long">
 						<div class="image">
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/img/homepage/block_butterfly.png">
+							<img src="<?php echo get_template_directory_uri(); ?>/assets/img/homepage/block_horse.png">
 						</div>
 						<div class="inner">
-							<h3>Wall Art</h3>
+							<h3>Sculptures</h3>
 							<div class="btn--underline">Shop Now</div>
 						</div>
 					</a>

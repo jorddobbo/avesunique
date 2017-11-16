@@ -5226,10 +5226,10 @@ select {
           font-size: 22px; } }
 .brand {
   margin: 10px auto;
-  -webkit-box-flex: 0.6;
-  -webkit-flex: 0.6;
-      -ms-flex: 0.6;
-          flex: 0.6; }
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1; }
 .brand .logo {
     width: 150px;
     display: block;
@@ -5937,11 +5937,18 @@ body#tinymce {
       display: flex;
       margin: 16px 0; }
       .block--long h3 {
-        font-size: 50px;
-        line-height: 55px;
+        font-size: 30px;
+        line-height: 35px;
         margin: 0 0 25px 0; }
       .block--long .inner {
         padding: 35px; } }
+@media only screen and (min-width: 1000px) {
+    .block--long h3 {
+      font-size: 50px;
+      line-height: 55px;
+      margin: 0 0 25px 0; }
+    .block--long .inner {
+      padding: 35px; } }
 .block--short {
   -webkit-box-flex: 0;
   -webkit-flex: 0 0 calc(50% - 5px);
@@ -5958,24 +5965,18 @@ body#tinymce {
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: 5px 0; }
+  margin: 5px 0;
+  text-align: center; }
 .block--short .inner {
     padding: 10px 20px 20px;
     margin: auto 0 0 0; }
-@media only screen and (min-width: 680px) {
-      .block--short .inner {
-        padding: 0 35px 35px 35px; } }
+.block--short .image {
+    padding: 10px 0 0 0; }
 .block--short h3 {
     font-size: 25px;
-    font-size: 1.5625rem;
-    line-height: 32.5px;
+    line-height: 30px;
     padding: 0;
     margin: 0; }
-@media only screen and (min-width: 680px) {
-      .block--short h3 {
-        font-size: 50px;
-        font-size: 3.125rem;
-        line-height: 65px; } }
 @media only screen and (min-width: 680px) {
     .block--short {
       -webkit-box-flex: 0;
@@ -5984,16 +5985,19 @@ body#tinymce {
               flex: 0 0 calc(33.33% - 16px);
       width: calc(33.33% - 16px);
       margin: 16px 0; }
-      .block--short .image {
-        -webkit-box-flex: 0;
-        -webkit-flex: 0 1 70%;
-            -ms-flex: 0 1 70%;
-                flex: 0 1 70%;
-        height: 0; }
+      .block--short h3 {
+        font-size: 30px;
+        line-height: 35px; }
       .block--short img {
-        height: 100%;
-        width: auto;
-        max-width: none; } }
+        width: 85%; }
+      .block--short .inner {
+        padding: 25px 15px 15px; } }
+@media only screen and (min-width: 1000px) {
+    .block--short h3 {
+      font-size: 50px;
+      line-height: 55px; }
+    .block--short .inner {
+      padding: 0 35px 35px 35px; } }
 .woocommerce .woocommerce__wrap {
   margin-top: 60px;
   margin-bottom: 60px;

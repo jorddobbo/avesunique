@@ -50,6 +50,19 @@
 		margin: 16px 0;
 
 		h3 {
+			font-size: 30px;
+			line-height: 35px;
+			margin: 0 0 25px 0;
+		}
+
+		.inner {
+			padding: 35px;
+		}
+	}
+
+	@include media-query(min, $wide-start) {
+
+		h3 {
 			font-size: 50px;
 			line-height: 55px;
 			margin: 0 0 25px 0;
@@ -68,24 +81,22 @@
 	display: flex;
 	flex-direction: column;
 	margin: 5px 0;
+	text-align: center;
 
 	.inner {
 		padding: 10px 20px 20px;
 		margin: auto 0 0 0;
+	}
 
-		@include media-query(min, $lap-start) {
-			padding: 0 35px 35px 35px;
-		}
+	.image {
+		padding: 10px 0 0 0;
 	}
 
 	h3 {
-		@include font-size(25px);
+		font-size: 25px;
+		line-height: 30px;
 		padding: 0;
 		margin: 0;
-
-		@include media-query(min, $lap-start) {
-			@include font-size(50px);
-		}
 	}
 
 	@include media-query(min, $lap-start) {
@@ -93,15 +104,29 @@
 		width: calc(33.33% - 16px);
 		margin: 16px 0;
 
-		.image {
-			flex: 0 1 70%;
-	    	height: 0;
+		h3 {
+			font-size: 30px;
+			line-height: 35px;
 		}
 
 		img {
-			height: 100%;
-		    width: auto;
-		    max-width: none;
+		    width: 85%;
+		}
+
+		.inner {
+			padding: 25px 15px 15px;
+		}
+
+	}
+
+	@include media-query(min, $wide-start) {
+		h3 {
+			font-size: 50px;
+			line-height: 55px;
+		}
+
+		.inner {
+			padding: 0 35px 35px 35px;
 		}
 	}
 }
