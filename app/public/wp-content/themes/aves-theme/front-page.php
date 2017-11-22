@@ -55,38 +55,16 @@
 			<div class="row">
 				<div class="promo-block promo-block--one">
 					<a href="#" class="block--long">
-						<div class="image">
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/img/homepage/block_rooster.png">
-						</div>
-						<div class="inner">
-							<h3>Outdoors</h3>
-							<div class="btn--underline">Shop Now</div>
-						</div>
+						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/homepage/image_rooster.jpg">
 					</a>
 					<a href="#" class="block--short">
-						<div class="image">
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/img/homepage/block_homeware.png">
-						</div>
-						<div class="inner">
-							<h3>Homeware</h3>
-						</div>
+						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/homepage/image_album.jpg">
 					</a>
 					<a href="#" class="block--short">
-						<div class="image">
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/img/homepage/block_art.png">
-						</div>
-						<div class="inner">
-							<h3>Art Gallery</h3>
-						</div>
+						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/homepage/image_frame.jpg">
 					</a>
 					<a href="#" class="block--long">
-						<div class="image">
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/img/homepage/block_horse.png">
-						</div>
-						<div class="inner">
-							<h3>Sculptures</h3>
-							<div class="btn--underline">Shop Now</div>
-						</div>
+						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/homepage/image_horse.jpg">
 					</a>
 				</div>
 			</div>
