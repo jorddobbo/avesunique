@@ -1,5 +1,6 @@
 .header {
 	position: relative;
+	z-index: 11;
 	
 	@include media-query(min, $desk-start) {
 		box-shadow: 0 0 1px rgba(0,0,0,0.3);

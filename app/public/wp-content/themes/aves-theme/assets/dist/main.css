@@ -5046,7 +5046,8 @@ select {
   @extend .sr-only-focusable;
 }*/
 .header {
-  position: relative; }
+  position: relative;
+  z-index: 11; }
 @media only screen and (min-width: 850px) {
     .header {
       box-shadow: 0 0 1px rgba(0, 0, 0, 0.3); } }
@@ -5922,6 +5923,11 @@ body#tinymce {
               flex: 0 0 auto;
       width: calc(32.50% - 12px);
       margin: 16px 0; } }
+.promo-block--artists img {
+  margin: 5px 0 0 0; }
+@media only screen and (min-width: 680px) {
+  .promo-block--artists img {
+    margin: 20px 0 0 0; } }
 .woocommerce .woocommerce__wrap {
   margin-top: 60px;
   margin-bottom: 60px;

@@ -68,6 +68,13 @@
 					</a>
 				</div>
 			</div>
+			<div class="row promo-block--artists">
+				<picture>
+				    <source srcset="<?php echo get_template_directory_uri(); ?>/assets/img/homepage/promo_artists-sm.jpg" media="(max-width: 768px)">
+				    <source srcset="<?php echo get_template_directory_uri(); ?>/assets/img/homepage/promo_artists.jpg">
+				    <img srcset="<?php echo get_template_directory_uri(); ?>/assets/img/homepage/promo_artists.jpg" alt="Independant Artists">
+				</picture>
+			</div>
 		</div>
 	</div>
 

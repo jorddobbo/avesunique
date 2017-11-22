@@ -40,3 +40,15 @@
 
 	}
 }
+
+.promo-block--artists {
+	img {
+		margin: 5px 0 0 0;
+	}
+
+	@include media-query(min, $lap-start) {
+		img {
+			margin: 20px 0 0 0;
+		}
+	}
+}
