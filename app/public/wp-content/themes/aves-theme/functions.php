@@ -14,7 +14,8 @@ $sage_includes = [
 	'lib/extras.php',    // Custom functions
 	'lib/setup.php',     // Theme setup
 	'lib/titles.php',    // Page titles
-	'lib/woocommerce.php'     // Page titles
+	'lib/woocommerce.php',     // Page titles
+	'lib/fields.php'     // Page titles
 ];
 foreach ($sage_includes as $file) {
 	if (!$filepath = locate_template($file)) {

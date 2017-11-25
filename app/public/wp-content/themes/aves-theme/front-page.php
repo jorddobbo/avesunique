@@ -54,17 +54,17 @@
 		<div class="container">
 			<div class="row">
 				<div class="promo-block promo-block--one">
-					<a href="#" class="block--long">
-						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/homepage/image_rooster.jpg">
+					<a href="<?php the_field('promo_one_link'); ?>" class="block--long">
+						<img src="<?php the_field('promo_one'); ?>">
 					</a>
-					<a href="#" class="block--short">
-						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/homepage/image_album.jpg">
+					<a href="<?php the_field('promo_two_link'); ?>" class="block--short">
+						<img src="<?php the_field('promo_two'); ?>">
 					</a>
-					<a href="#" class="block--short">
-						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/homepage/image_frame.jpg">
+					<a href="<?php the_field('promo_three_link'); ?>" class="block--short">
+						<img src="<?php the_field('promo_three'); ?>">
 					</a>
-					<a href="#" class="block--long">
-						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/homepage/image_horse.jpg">
+					<a href="<?php the_field('promo_four_link'); ?>" class="block--long">
+						<img src="<?php the_field('promo_four'); ?>">
 					</a>
 				</div>
 			</div>
