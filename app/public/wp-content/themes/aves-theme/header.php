@@ -9,9 +9,9 @@
 
     <body <?php body_class(); ?>>
 
-      <div class="header__overlay"></div>
-
       <header class="header">
+
+        <div class="header__overlay"></div>
 
         <div class="header__top">
           <div class="header__left">

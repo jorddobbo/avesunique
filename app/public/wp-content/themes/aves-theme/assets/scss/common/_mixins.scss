@@ -157,18 +157,22 @@ Styling
     }
 }
 
-@mixin icon-circle($color) {
-	width: 40px;
-	height: 40px;
-	line-height: 40px;
+@mixin icon-circle($color: $light, $size: 40px) {
+	width: $size;
+	height: $size;
+	line-height: $size;
 	text-align: center;
 	background: $color;
-	border-radius: 50px;
+	border-radius: $size;
 	color: rgba(0,0,0,0.6);
 	vertical-align: middle;
 	display: inline-block;
 
 	&::before {
-		font-size: 22px;
+		font-size: ($size / 2);
 	}
+
+    &:hover {
+        background: darken($color, 7%);
+    }
 }

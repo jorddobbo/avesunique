@@ -12,7 +12,7 @@ export default function() {
 		  appendDots: $('.hero__outer')
 		});
 
-		$('header').on('click', '.header__search', function(event) {
+		$('header').on('click, touchstart', '.header__search', function(event) {
 			var header = $('header');
 
 			event.preventDefault();
@@ -20,7 +20,7 @@ export default function() {
 			header.find('.product-search-field').focus();
 		});
 
-		$('header').on('click', '.header__menu', function(event) {
+		$('header').on('click, touchstart', '.header__menu', function(event) {
 			var header = $('header');
 
 			event.preventDefault();
@@ -29,7 +29,7 @@ export default function() {
 
 		});
 
-		$('body').on('click', '.header__overlay', function(event) {
+		$('body').on('click touchstart', '.header__overlay', function(event) {
 			var header = $('header');
 
 			event.preventDefault();
@@ -37,7 +37,7 @@ export default function() {
 			header.find('.nav-primary').toggleClass('show');
 		});
 
-		$('.sidebar__toggle').click(function () {
+		$('.sidebar__toggle').on('click, touchstart', function () {
 			$(this).toggleClass('show');
 		    $('.sidebar__inner').toggleClass('show');
 		});

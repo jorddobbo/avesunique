@@ -129,6 +129,14 @@ h4, .h4 {
     margin: 0 0 35px 0;
     text-align: center;
 
+    &--Blue { background: rgba($purple, .3) url('../../assets/img/patterns/crosses.svg') no-repeat 0 50%/auto 100%; }
+
+    &--Pink { background: rgba($pink, .3) url('../../assets/img/patterns/crosses.svg') no-repeat 0 50%/auto 100%; }
+
+    &--Peach { background: rgba($peach, .3) url('../../assets/img/patterns/crosses.svg') no-repeat 0 50%/auto 100%; }
+
+    &--Green { background: rgba($green, .3) url('../../assets/img/patterns/crosses.svg') no-repeat 0 50%/auto 100%; }
+
     h1 {
         text-align: center;
         margin: 0;

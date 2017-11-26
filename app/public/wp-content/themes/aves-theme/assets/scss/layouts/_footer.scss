@@ -79,6 +79,10 @@
 	order: 1;
 	margin: 0 0 30px 0;
 
+	form {
+		position: relative;
+	}
+
 	.input--combined {
 		margin: 0 0 20px 0;
 	}
@@ -89,13 +93,21 @@
 		padding: 14px 20px;
 	}
 
-	button {
+	input[type="submit"] {
 		font-size: 20px;
 		background: #fff;
+		border: 0;
 		border-left: 1px solid $light;
 		font-weight: bold;
 		color: $dark;
 		padding: 14px 20px;
+	}
+
+	.div.wpcf7-response-output {
+	    background: transparent;
+	    padding: 0;
+	    margin: 0 0 10px 0;
+	    color: #303033;
 	}
 
 	@include media-query(min, $desk-start) {

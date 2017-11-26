@@ -15,10 +15,7 @@
 
 	    <div class="footer__newsletter">
 	    	<h3>Join our newsletter</h3>
-	    	<div class="input--combined">
-	    		<input type="email" placeholder="Enter your email address" />
-	    		<button type="submit" value="Join" name="Join">Join</button>
-	    	</div>
+	    	<?php echo do_shortcode('[contact-form-7 id="272" title="Footer"]'); ?>
 	    	<p>Every month. Full of offers, info and fun.</p>
 	    </div>
 
@@ -35,8 +32,8 @@
 		</div>
 		<div class="footer__right">
 			<p>
-				<a href="/">Privacy Policy</a>
-				<a href="/">T&C's</a>
+				<a href="/privacy-policy">Privacy Policy</a>
+				<a href="/terms-conditions">T&C's</a>
 				<img class="card-icon" src="<?= get_template_directory_uri(); ?>/assets/img/footer/paypal.svg">
 				<img class="card-icon" src="<?= get_template_directory_uri(); ?>/assets/img/footer/mastercard.svg">
 			</p>

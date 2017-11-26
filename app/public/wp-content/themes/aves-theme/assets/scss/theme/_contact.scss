@@ -1,0 +1,78 @@
+.contact__wrap {
+	max-width: 700px;
+	margin: 0 auto;
+
+	@include media-query(min, $desk-start) {
+		display: flex;
+		align-items: center;
+	}
+}
+
+.contact__info {
+	width: 100%;
+	text-align: center;
+	margin: 0 0 40px 0;
+
+	h3 {
+		margin: 0 0 5px 0;
+	}
+
+	@include media-query(min, $desk-start) {
+		width: 50%;
+		flex: 1 0 auto;
+		margin: 0;
+	}
+}
+
+.contact__call {
+	margin: 0 0 20px 0;
+}
+
+.contact__email {
+	margin: 0 0 20px 0;
+}
+
+.contact__social {
+
+	h3 {
+		margin: 0 0 15px 0;
+	}
+
+	.icon--circle {
+		@include icon-circle($light, 55px);
+		height: 55px;
+		width: 55px;
+		margin: 0 3px;
+	}
+}
+
+.contact__form {
+	border: 1px solid $light;
+	padding: 30px;
+	border-radius: $base-radius;
+
+	input[type="email"],
+	input[type="text"],
+	textarea {
+		width: 100%;
+	}
+
+	textarea {
+		height: 150px;
+	}
+
+	@include media-query(min, $desk-start) {
+		width: 50%;
+		flex: 1 0 auto;
+	}
+
+}
+
+.contact__submit {
+	position: relative;
+
+	.btn {
+		width: 100%;
+		background: $green;
+	}
+}

@@ -42,7 +42,9 @@ textarea {
         display: flex;
     }
 
-    input {
+    input[type="email"],
+    input[type="text"],
+    .wpcf7-form-control-wrap {
         width: 100%;
         margin-bottom: 10px;
 
@@ -54,7 +56,8 @@ textarea {
         }
     }
 
-    button {
+    button,
+    input[type="submit"] {
         @include media-query(min, $mob-start) {
             flex-shrink: 0;
             border-radius: 0 $base-radius $base-radius 0;
