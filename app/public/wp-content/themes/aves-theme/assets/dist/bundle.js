@@ -12721,7 +12721,7 @@ exports.default = function () {
 			appendDots: $('.hero__outer')
 		});
 
-		$('header').on('click, touchstart', '.header__search', function (event) {
+		$('header').on('click', '.header__search', function (event) {
 			var header = $('header');
 
 			event.preventDefault();
@@ -12729,7 +12729,7 @@ exports.default = function () {
 			header.find('.product-search-field').focus();
 		});
 
-		$('header').on('click, touchstart', '.header__menu', function (event) {
+		$('header').on('click', '.header__menu', function (event) {
 			var header = $('header');
 
 			event.preventDefault();
@@ -12737,7 +12737,7 @@ exports.default = function () {
 			$('.header__overlay').toggleClass('show');
 		});
 
-		$('body').on('click touchstart', '.header__overlay', function (event) {
+		$('body').on('click', '.header__overlay', function (event) {
 			var header = $('header');
 
 			event.preventDefault();
@@ -12745,7 +12745,7 @@ exports.default = function () {
 			header.find('.nav-primary').toggleClass('show');
 		});
 
-		$('.sidebar__toggle').on('click, touchstart', function () {
+		$('.sidebar__toggle').click(function () {
 			$(this).toggleClass('show');
 			$('.sidebar__inner').toggleClass('show');
 		});

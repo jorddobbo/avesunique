@@ -4,7 +4,7 @@
 	h1 {
 		margin: 0 0 15px 0;
 	}
-}
+} 
 
 .woocommerce-MyAccount-navigation {
 
@@ -72,16 +72,16 @@
 	@include media-query(min, $desk-start) {
 		display: flex;
 		justify-content: space-between;
-	}
 
-	.u-column1 {
-		flex: 0 0 calc(50% - 20px);
-		width: calc(50% - 20px);
-	}
+		.u-column1 {
+			flex: 0 0 calc(50% - 20px);
+			width: calc(50% - 20px);
+		}
 
-	.u-column2 {
-		flex: 0 0 calc(50% - 20px);
-		width: calc(50% - 20px);
+		.u-column2 {
+			flex: 0 0 calc(50% - 20px);
+			width: calc(50% - 20px);
+		}
 	}
 }
 

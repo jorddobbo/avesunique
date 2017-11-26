@@ -5191,6 +5191,11 @@ select {
       visibility: visible; }
 .header__left .product-search .icon--circle {
       margin: 0; }
+@media only screen and (max-width: 679px) {
+    .header__left .icon--circle {
+      width: 30px;
+      height: 30px;
+      line-height: 30px; } }
 @media only screen and (max-width: 849px) {
     .header__left .product-search.floating {
       top: 100%;
@@ -5217,6 +5222,11 @@ select {
 @media only screen and (min-width: 850px) {
     .header__menu {
       display: none; } }
+@media only screen and (max-width: 679px) {
+    .header__menu .icon--circle {
+      width: 30px;
+      height: 30px;
+      line-height: 30px; } }
 .header__right {
   margin: 0 10px 0 auto;
   -webkit-box-flex: 1;
@@ -5261,6 +5271,11 @@ select {
 @media only screen and (min-width: 850px) {
     .header__account {
       padding: 0 20px 0 0; } }
+@media only screen and (max-width: 679px) {
+    .header__account .icon--circle {
+      width: 30px;
+      height: 30px;
+      line-height: 30px; } }
 .header__basket {
   display: -webkit-box;
   display: -webkit-flex;
@@ -5301,6 +5316,11 @@ select {
     color: #fff;
     padding: 3px 5px;
     border-radius: 50px; }
+@media only screen and (max-width: 679px) {
+    .header__basket .icon--circle {
+      width: 30px;
+      height: 30px;
+      line-height: 30px; } }
 @media only screen and (min-width: 850px) {
     .header__basket {
       border-left: 1px solid #EAEAEA; }
@@ -5325,17 +5345,22 @@ select {
           background: #bbf8a9; } }
 .brand {
   margin: 10px auto;
-  -webkit-box-flex: 1;
-  -webkit-flex: 1;
-      -ms-flex: 1;
-          flex: 1; }
+  -webkit-box-flex: 1.4;
+  -webkit-flex: 1.4;
+      -ms-flex: 1.4;
+          flex: 1.4; }
 .brand .logo {
     width: 150px;
     display: block;
     margin: 0 auto; }
 @media only screen and (min-width: 680px) {
-    .brand .logo {
-      width: 150px; } }
+    .brand {
+      -webkit-box-flex: 1;
+      -webkit-flex: 1;
+          -ms-flex: 1;
+              flex: 1; }
+      .brand .logo {
+        width: 150px; } }
 @media only screen and (min-width: 1000px) {
     .brand .logo {
       width: 320px; } }
@@ -6657,19 +6682,19 @@ div.wpcf7 .ajax-loader {
         -webkit-box-pack: justify;
         -webkit-justify-content: space-between;
             -ms-flex-pack: justify;
-                justify-content: space-between; } }
-.my-account .u-columns .u-column1 {
-      -webkit-box-flex: 0;
-      -webkit-flex: 0 0 calc(50% - 20px);
-          -ms-flex: 0 0 calc(50% - 20px);
-              flex: 0 0 calc(50% - 20px);
-      width: calc(50% - 20px); }
-.my-account .u-columns .u-column2 {
-      -webkit-box-flex: 0;
-      -webkit-flex: 0 0 calc(50% - 20px);
-          -ms-flex: 0 0 calc(50% - 20px);
-              flex: 0 0 calc(50% - 20px);
-      width: calc(50% - 20px); }
+                justify-content: space-between; }
+        .my-account .u-columns .u-column1 {
+          -webkit-box-flex: 0;
+          -webkit-flex: 0 0 calc(50% - 20px);
+              -ms-flex: 0 0 calc(50% - 20px);
+                  flex: 0 0 calc(50% - 20px);
+          width: calc(50% - 20px); }
+        .my-account .u-columns .u-column2 {
+          -webkit-box-flex: 0;
+          -webkit-flex: 0 0 calc(50% - 20px);
+              -ms-flex: 0 0 calc(50% - 20px);
+                  flex: 0 0 calc(50% - 20px);
+          width: calc(50% - 20px); } }
 .my-account.woocommerce-edit-address h3 {
     padding: 0 0 20px 0;
     border-bottom: 1px solid #EAEAEA; }

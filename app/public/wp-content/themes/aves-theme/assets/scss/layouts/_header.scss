@@ -47,6 +47,16 @@
 
 	}
 
+	@include media-query(max, $lap-start) {
+
+		.icon--circle {
+			width: 30px;
+			height: 30px;
+			line-height: 30px;
+		}
+
+	}
+
 	@include media-query(max, $desk-start) {
 		.product-search.floating {
 			top: 100%;
@@ -86,6 +96,16 @@
 	@include media-query(min, $desk-start) {
         display: none;
     }
+
+    @include media-query(max, $lap-start) {
+
+		.icon--circle {
+			width: 30px;
+			height: 30px;
+			line-height: 30px;
+		}
+
+	}
 }
 
 .header__right {
@@ -111,6 +131,16 @@
 	@include media-query(min, $desk-start) {
         padding: 0 20px 0 0;
     }
+
+    @include media-query(max, $lap-start) {
+
+		.icon--circle {
+			width: 30px;
+			height: 30px;
+			line-height: 30px;
+		}
+
+	}
 }
 
 .header__basket {
@@ -144,6 +174,16 @@
 		border-radius: 50px;
 	}
 
+	@include media-query(max, $lap-start) {
+
+		.icon--circle {
+			width: 30px;
+			height: 30px;
+			line-height: 30px;
+		}
+
+	}
+
 	@include media-query(min, $desk-start) {
         border-left: 1px solid $light;
 
@@ -165,7 +205,7 @@
 
 .brand {
 	margin: 10px auto;
-	flex: 1;
+	flex: 1.4;
 
 	.logo {
 		width: 150px;
@@ -174,6 +214,8 @@
 	}
 
 	@include media-query(min, $lap-start) {
+		flex: 1;
+
 		.logo {
         	width: 150px;
         }
