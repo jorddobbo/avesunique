@@ -48,7 +48,8 @@
 }
 
 .btn,
-button {
+button,
+a.button {
     @include button();
 }
 

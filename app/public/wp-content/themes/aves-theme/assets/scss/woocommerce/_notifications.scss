@@ -8,7 +8,7 @@
     border-top: 0;
     border-radius: $base-radius;
 
-    a {
+    a, a.button, .btn {
     	order: 2;
     	margin: 0 0 0 auto;
     }
@@ -32,6 +32,10 @@
 	a.button {
 		background-color: $pink;
 		color: rgba(#000, 0.6);
+
+		&:hover {
+			background-color: darken($pink, 10%);
+		}
 	}
 }
 
@@ -41,6 +45,10 @@
 	a.button {
 		background-color: $purple;
 		color: rgba(#000, 0.6);
+
+		&:hover {
+			background-color: darken($purple, 10%);
+		}
 	}
 }
 
@@ -50,5 +58,9 @@
 	a.button {
 		background-color: $green;
 		color: rgba(#000, 0.6);
+
+		&:hover {
+			background-color: darken($green, 10%);
+		}
 	}
 }

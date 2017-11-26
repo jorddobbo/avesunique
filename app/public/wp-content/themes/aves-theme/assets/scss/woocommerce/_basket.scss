@@ -48,39 +48,6 @@ table.cart {
 		color: $darker;
 	}
 
-	td.actions {
-		padding: 20px 0 0 0;
-
-		.coupon {
-			float: left;
-			display: flex;
-
-			label {
-				display: none;
-			}
-
-			.input-text {
-				padding: 6px 10px;
-			    @include font-size($base-font-size);
-			    margin-right: 10px;
-			    line-height: $base-line-height;
-			    border: 1px solid $light;
-			    border-radius: $base-radius;
-			    appearance: none;
-			    background: #fff;
-
-			    &:hover, &:focus {
-			        outline: none;
-			    }
-			}
-		}
-
-		input[name="update_cart"] {
-			float: right;
-		}
-
-	}
-
 	@include media-query('max', $lap-start) {
 
 		thead {
@@ -147,9 +114,47 @@ table.cart {
 
 }
 
+td.actions {
+	padding: 20px 0 0 0;
+
+	.coupon {
+		float: left;
+		display: flex;
+		width: 100%;
+
+		label {
+			display: none;
+		}
+
+		.input-text {
+			padding: 6px 10px;
+		    @include font-size($base-font-size);
+		    margin-right: 10px;
+		    line-height: $base-line-height;
+		    border: 1px solid $light;
+		    border-radius: $base-radius;
+		    appearance: none;
+		    background: #fff;
+
+		    &:hover, &:focus {
+		        outline: none;
+		    }
+		}
+	}
+
+	input[name="update_cart"] {
+		float: right;
+	}
+
+	@include media-query(min, $lap-start) {
+		.coupon {
+			width: auto;
+		}
+	}
+
+}
+
 .cart-collaterals {
-	width: 40%;
-    float: right;
 
     .cart_totals {
     	table {
@@ -173,6 +178,11 @@ table.cart {
     	h2 {
     		display: none;
     	}
+    }
+
+    @include media-query(min, $lap-start) {
+    	width: 40%;
+    	float: right;
     }
 
 }

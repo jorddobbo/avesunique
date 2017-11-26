@@ -167,6 +167,7 @@ Styling
 	color: rgba(0,0,0,0.6);
 	vertical-align: middle;
 	display: inline-block;
+    transition: $base-transition;
 
 	&::before {
 		font-size: ($size / 2);
