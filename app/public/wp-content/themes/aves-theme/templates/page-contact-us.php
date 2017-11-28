@@ -28,10 +28,6 @@ $value = $field['value'];
 
 	<div class="contact__wrap">
 		<div class="contact__info">
-			<div class="contact__call">
-				<h3>Call Us</h3>
-				<p>01623 546 8956</p>
-			</div>
 			<div class="contact__email">
 				<h3>Email Us</h3>
 				<p>enquiries@avesunique.co.uk</p>
