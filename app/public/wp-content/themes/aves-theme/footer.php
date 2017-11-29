@@ -21,9 +21,8 @@
 
 	    <div class="footer__social">
 	    	<h3>Social</h3>
-	    	<a href="/basket"><span class="icon--circle mdi mdi-facebook-box"></span></a>
-	    	<a href="/basket"><span class="icon--circle mdi mdi-twitter"></span></a>
-	    	<a href="/basket"><span class="icon--circle mdi mdi-instagram"></span></a>
+	    	<a href="https://www.facebook.com/Avesunique0"><span class="icon--circle mdi mdi-facebook-box"></span></a>
+	    	<a href="https://www.instagram.com/avesunique/"><span class="icon--circle mdi mdi-instagram"></span></a>
 	    </div>
 	</div>
 	<div class="footer__bottom">
